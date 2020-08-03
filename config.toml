@@ -1,4 +1,4 @@
-baseURL = "https://hashnote.biz"
+baseURL = "http://hashnote.biz/"
 title = "Great Success !!"
 languageCode = "ja"
 theme = "hello-friend-ng"
