@@ -12,17 +12,17 @@ series:
   - Hugo 101
 ---
 
-## 準備するもの
+### 準備するもの
 
 > [brew](https://brew.sh/index_ja)
 
-## インストール
+### インストール
 
 ```
 $ brew install hugo
 ```
 
-## サイトを作る
+### サイトを作る
 
 適当なディレクトリで
 
@@ -31,13 +31,19 @@ $ hugo new site my_blog
 $ cd my_blog
 ```
 
-## テーマのインストール
+### テーマのインストール
 
 > テーマは公式から
 > [HUGO](https://themes.gohugo.io/)
 
-## ローカルでテスト
+### ローカルでテスト
 
 ```
 $ hugo server -D
+```
+
+### 記事の作成
+
+```
+$ hugo new posts/markdown.md
 ```
