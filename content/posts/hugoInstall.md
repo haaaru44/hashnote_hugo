@@ -1,29 +1,28 @@
 ---
 author:
-  name: 'hash'
+  name: "hash"
 date: 2020-08-03
-linktitle: hugoブログインストール
+linktitle: hugoインストール
 type:
   - post
   - posts
-title: hugoブログインストール(mac)
+title: hugoインストール(mac)
 weight: 10
 series:
   - Hugo 101
 ---
 
-## 準備するもの
+### 準備するもの
 
-brew
-https://brew.sh/index_ja
+> [brew](https://brew.sh/index_ja)
 
-## インストール
+### インストール
 
 ```
 $ brew install hugo
 ```
 
-## サイトを作る
+### サイトを作る
 
 適当なディレクトリで
 
@@ -32,14 +31,19 @@ $ hugo new site my_blog
 $ cd my_blog
 ```
 
-## テーマのインストール
+### テーマのインストール
 
-テーマは公式から
-https://themes.gohugo.io/
-かなり豊富にありますね。。
+> テーマは公式から
+> [HUGO](https://themes.gohugo.io/)
 
-## ローカルでテスト
+### ローカルでテスト
 
 ```
 $ hugo server -D
+```
+
+### 記事の作成
+
+```
+$ hugo new posts/markdown.md
 ```
