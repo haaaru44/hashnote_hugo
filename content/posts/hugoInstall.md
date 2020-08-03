@@ -6,7 +6,7 @@ linktitle: hugoブログインストール
 type:
   - post
   - posts
-title: mac
+title: hugoブログインストール(mac)
 weight: 10
 series:
   - Hugo 101
