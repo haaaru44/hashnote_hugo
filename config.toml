@@ -1,5 +1,5 @@
 baseURL = "https://nifty-bartik-935482.netlify.app"
-title = "Hello Friend NG"
+title = "Greate Success !!"
 languageCode = "ja"
 theme = "hello-friend-ng"
 
@@ -37,7 +37,7 @@ disableHugoGeneratorInject = false
 posts = "/posts/:year/:month/:title/"
 
 [author]
-name = "Jane Doe"
+name = "hash"
 
 [blackfriday]
 hrefTargetBlank = true
