@@ -17,7 +17,7 @@ series:
 brew
 https://brew.sh/index_ja
 
-##　インストール
+## インストール
 
 ```
 $ brew install hugo
