@@ -1,4 +1,4 @@
-baseURL = "http://hashnote.biz/"
+baseURL = "https://nifty-bartik-935482.netlify.app"
 title = "Great Success !!"
 languageCode = "ja"
 theme = "hello-friend-ng"
