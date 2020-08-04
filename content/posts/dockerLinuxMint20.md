@@ -5,6 +5,12 @@ description = "LinuxMintDocker"
 linktitle = ""
 title = "LinuxにDockerをインストール"
 slug = ["linux","docker","mint"]
+tags = [
+  "linux",
+  "docker",
+  "mint",
+  "hugo",
+  ]
 type = "post"
 +++
 
