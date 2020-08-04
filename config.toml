@@ -3,6 +3,8 @@ title = "Great Success !!"
 languageCode = "ja"
 theme = "hello-friend-ng"
 
+googleAnalytics = "UA-174476386-1"
+
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
 
