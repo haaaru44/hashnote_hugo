@@ -113,9 +113,9 @@ logoHomeLink = "/"
 name = "twitter"
 url = "https://twitter.com/hash2666"
 
-[[params.social]]
-name = "email"
-url = "haaaru2200@gmail.com"
+# [[params.social]]
+# name = "email"
+# url = "haaaru2200@gmail.com"
 
 [[params.social]]
 name = "github"
