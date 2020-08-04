@@ -91,7 +91,7 @@ msapplication = "#252627"
 theme = "#252627"
 
 [params.logo]
-logoText = "$ cd /hash note/"
+logoText = "$ cd /hash_note/"
 logoHomeLink = "/"
 # Set true to remove the logo cursor entirely.
 # logoCursorDisabled = false
