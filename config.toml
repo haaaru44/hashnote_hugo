@@ -121,13 +121,13 @@ url = "mailto:nobody@example.com"
 name = "github"
 url = "https://github.com/"
 
-[[params.social]]
-name = "linkedin"
-url = "https://www.linkedin.com/"
+# [[params.social]]
+# name = "linkedin"
+# url = "https://www.linkedin.com/"
 
-[[params.social]]
-name = "stackoverflow"
-url = "https://www.stackoverflow.com/"
+# [[params.social]]
+# name = "stackoverflow"
+# url = "https://www.stackoverflow.com/"
 
 [languages]
 [languages.en]

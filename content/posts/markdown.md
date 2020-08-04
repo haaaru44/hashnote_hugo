@@ -7,6 +7,12 @@ featuredpath = "date"
 linktitle = "hugo"
 title = "MarkDownでYouTube動画埋め込み"
 slug = "markdownyoutube"
+tags = [
+  "linux",
+  "markdown",
+  "youtube",
+  "hugo",
+  ]
 type = "post"
 +++
 
