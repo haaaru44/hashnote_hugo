@@ -1,16 +1,18 @@
----
-author:
-  name: "hash"
-date: 2020-08-03
-linktitle: hugoインストール
-type:
-  - post
-  - posts
-title: hugoインストール(mac)
-weight: 10
-series:
-  - Hugo 101
----
++++
+categories = ["Hugo","Linux"]
+date = "2020-08-03"
+description = "HugoMacOs"
+linktitle = ""
+title = "hugoインストール(mac)"
+slug = ["linux","docker","mint"]
+tags = [
+  "linux",
+  "docker",
+  "mint",
+  "hugo",
+  ]
+type = "post"
++++
 
 ### 準備するもの
 
