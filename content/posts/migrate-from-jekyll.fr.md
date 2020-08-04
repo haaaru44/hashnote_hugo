@@ -1,19 +1,19 @@
-+++
-categories = ["Hugo", "Jekyll"]
-date = "2014-03-10"
-description = ""
-featured = ""
-featuredalt = ""
-featuredpath = ""
-linktitle = ""
-slug = "Migrer vers Hugo depuis Jekyll"
-title = "Migrer vers Hugo depuis Jekyll"
-type = ["posts","post"]
-[ author ]
-  name = "Hugo Authors"
-+++
+---
+author:
+  name: "hash"
+date: 2020-08-03
+linktitle: hugoインストール
+type:
+  - post
+  - posts
+title: hugoインストール(mac)
+weight: 10
+series:
+  - Hugo 101
+---
 
 ## Déplacez le contenu statique vers `static`
+
 Jekyll a une règle comme quoi tout répertoire qui ne commence pas par `_` sera
 copié tel-quel dans le répertoire `_site`. Hugo garde tout le contenu statique
 dans le répertoire `static`. Vous devez donc déplacer tout ce type de contenu
@@ -22,7 +22,9 @@ là-dedans. Avec Jekylll, l'arborescence ressemblant à ceci :
     ▾ <root>/
         ▾ images/
             logo.png
+
 <!--more-->
+
 doit devenir
 
     ▾ <root>/
@@ -34,56 +36,60 @@ En outre, vous allez devoir déplacer tous les fichiers présents à la racine v
 le répertoire `static`.
 
 ## Créez votre configuration Hugo
+
 Hugo peut lire votre fichier de configuration au format JSON, YAML et TOML. Hugo
 supporte également les paramètres de configuration. Plus d'informations sur la
 [documentation de configuration Hugo](/overview/configuration/)
 
 ## Définiez votre répertoire de publication sur `_site`
+
 La valeur par défaut pour Jekyll est d'utiliser le répertoire `_site` pour
 publier le contenu. Pour Hugo, le répertoire de publication est `public`. Si,
 comme moi, vous avez [lié `_site` vers un sous-module git sur la branche
 `gh-pages`](http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.ht
 ml), vous allez vouloir avoir quelques alternatives :
 
-1. Changez votre lien du sous-module `gh-pages` pour pointer sur public au lieu
-de `_site` (recommendé).
+1.  Changez votre lien du sous-module `gh-pages` pour pointer sur public au lieu
+    de `_site` (recommendé).
 
-        git submodule deinit _site
-        git rm _site
-        git submodule add -b gh-pages
-            git@github.com:your-username/your-repo.git public
+            git submodule deinit _site
+            git rm _site
+            git submodule add -b gh-pages
+                git@github.com:your-username/your-repo.git public
 
-2. Ou modifiez la configuration de Hugo pour utiliser le répertoire `_site` au
-lieu de `public`.
+2.  Ou modifiez la configuration de Hugo pour utiliser le répertoire `_site` au
+    lieu de `public`.
 
-        {
-            ..
-            "publishdir": "_site",
-            ..
-        }
+            {
+                ..
+                "publishdir": "_site",
+                ..
+            }
 
 ## Convertir un thème Jekyll pour Hugo
+
 C'est la majeure partie du travail. La documentation est votre ami.
-Vous devriez vous référer à [la documentation des thèmes de Jekyll]
-(http://jekyllrb.com/docs/templates/) si vous devez vous rafraîchir la mémoire
-sur la façon dont vous avez construit votre blog et [les thèmes de Hugo]
-(/layout/templates/) pour apprendre la manière de faire sur Hugo.
+Vous devriez vous référer à [la documentation des thèmes de Jekyll](http://jekyllrb.com/docs/templates/) si vous devez vous rafraîchir la mémoire
+sur la façon dont vous avez construit votre blog et [les thèmes de Hugo](/layout/templates/) pour apprendre la manière de faire sur Hugo.
 
 Pour vous donner un point de référence, la conversion du thème pour
 [heyitsalex.net](http://heyitsalex.net/) ne m'a pris que quelques heures.
 
 ## Convertir les extensions Jekyll vers des shortcodes Hugo
+
 Jekyll support les [extensions](http://jekyllrb.com/docs/plugins/); Hugo lui a
 les [shortcodes](/doc/shortcodes/). C'est assez banal les porter.
 
 ### Implémentation
+
 Comme exemple, j'utilise une extension pour avoir un [`image_tag`](https://githu
 b.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc
-06908ec/_plugins/image_tag.rb) presonnalisé pour générer les images avec une
+06908ec/\_plugins/image_tag.rb) presonnalisé pour générer les images avec une
 légende sur Jekyll. J'ai vu que Hugo implémente un shortcode qui fait exactement
 la même chose.
 
 Extension Jekyll :
+
 ```
 module Jekyll
   class ImageTag < Liquid::Tag
@@ -143,6 +149,7 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
 ```
 
 Écrite en tant que shortcode Hugo:
+
 ```
 <!-- image -->
 <figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
@@ -172,7 +179,9 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
 ```
 
 ### Utilisation
+
 J'ai simplement changé :
+
 ```
 {% image
     full http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg
@@ -197,20 +206,25 @@ différente de la `figure` intégrée) :
     link="http://www.flickr.com/photos/alexnormand/4829260124/in/
             set-72157624547713078/" */%}}
 ```
+
 Comme bonus, les paramètres nommés des shortcodes sont plus lisibles.
 
 ## Touches finales
+
 ### Corriger le contenu
+
 Suivant le nombre de modifications que vous avez effectué sur chaque articles
 avec Jekyll, cette étape requierra plus ou moins d'efforts. Il n'y a pas de
 règles rigoureuses ici, si ce n'est que `hugo server --watch` est votre ami.
 Testez vos modifications et corrigez les erreurs au besoin.
 
 ### Nettoyez le tout
+
 Vous voudrez sûrement supprimer votre configuration Jekyll maintenant que tout
 est fini. Exact, pensez à supprimer tout ce qui est inutilisé.
 
 ## Un exemple pratique
+
 [Hey, it's Alex](http://heyitsalex.net/) a été migré de Jekyll vers Hugo en
 moins de temps qu'une journée père enfant. Vous pouvez trouver toutes les
 modification en regardant ce [diff](https://github.com/alexandre-normand/alexand
