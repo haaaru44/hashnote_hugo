@@ -5,7 +5,7 @@ description = "Apprenez comment créer un thème Hugo"
 featured = "pic01.jpg"
 featuredalt = ""
 featuredpath = "date"
-linktitle = ""
+linktitle = "creation"
 title = "Création d'un nouveau thème"
 slug = "Creation d'un nouveau theme"
 type = "post"
@@ -17,7 +17,7 @@ Ce tutoriel vous montrera comment créer un thème simple pour Hugo. Je suppose 
 
 Nous allons commencer par créer un nouveau site avec un modèle très basique. Ensuite, nous ajouterons quelques pages et des publications. Avec de petites variations, vous pourrez créer de nombreux types de sites web.
 
-Dans ce tutoriel, les commandes que vous entrez commenceront par l'invite "$". La sortie suivra. Les lignes qui commencent par "#" sont des commentaires que j'ai ajoutés pour expliquer un point. Lorsque je montre les mises à jour d'un fichier, le ":wq" sur la dernière ligne signifie qu'il faut sauvegarder le fichier.
+Dans ce tutoriel, les commandes que vous entrez commenceront par l'invite "\$". La sortie suivra. Les lignes qui commencent par "#" sont des commentaires que j'ai ajoutés pour expliquer un point. Lorsque je montre les mises à jour d'un fichier, le ":wq" sur la dernière ligne signifie qu'il faut sauvegarder le fichier.
 
 Voici un exemple :
 
@@ -47,7 +47,6 @@ Contenu du fichier
 $
 ```
 
-
 ## Quelques définitions
 
 Il y a quelques concepts que vous devez comprendre avant de créer un thème.
@@ -56,15 +55,15 @@ Il y a quelques concepts que vous devez comprendre avant de créer un thème.
 
 Les skins sont les fichiers responsables de l'apparence de votre site. C'est le CSS qui contrôle les couleurs et les polices, c'est le Javascript qui détermine les actions et les réactions. Ce sont aussi les règles que Hugo utilise pour transformer votre contenu en HTML que le site montrera aux visiteurs.
 
-Vous avez deux façons de créer un skin. Le moyen le plus simple est de le créer dans le répertoire ```layouts/```. Si vous le faites, vous n'avez pas à vous soucier de configurer Hugo pour le reconnaître. Le premier endroit où Hugo recherchera pour les règles et les fichiers se trouve dans le répertoire ```layouts/``` afin de trouver toujours le skin.
+Vous avez deux façons de créer un skin. Le moyen le plus simple est de le créer dans le répertoire `layouts/`. Si vous le faites, vous n'avez pas à vous soucier de configurer Hugo pour le reconnaître. Le premier endroit où Hugo recherchera pour les règles et les fichiers se trouve dans le répertoire `layouts/` afin de trouver toujours le skin.
 
-Votre deuxième choix est de le créer dans un sous-répertoire du répertoire ```themes/```. Si vous le faites, vous devez toujours indiquer à Hugo où chercher le skin. C'est un travail supplémentaire, cependant, alors, pourquoi s'embêter avec ça?
+Votre deuxième choix est de le créer dans un sous-répertoire du répertoire `themes/`. Si vous le faites, vous devez toujours indiquer à Hugo où chercher le skin. C'est un travail supplémentaire, cependant, alors, pourquoi s'embêter avec ça?
 
-La différence entre la création d'un skin dans ```layouts/``` et la création dans ```themes/``` est très subtile. Un skin dans ```layouts/``` ne peut pas être personnalisé sans mettre à jour les modèles et les fichiers statiques sur lesquels il est construit. Un skin créé dans ```themes/```, d'autre part, peut être et facilite son utilisation par d'autres personnes.
+La différence entre la création d'un skin dans `layouts/` et la création dans `themes/` est très subtile. Un skin dans `layouts/` ne peut pas être personnalisé sans mettre à jour les modèles et les fichiers statiques sur lesquels il est construit. Un skin créé dans `themes/`, d'autre part, peut être et facilite son utilisation par d'autres personnes.
 
-Le reste de ce tutoriel appellera un skin créé dans le répertoire ``` thèmes/ ```, un thème.
+Le reste de ce tutoriel appellera un skin créé dans le répertoire `thèmes/`, un thème.
 
-Notez que vous pouvez utiliser ce tutoriel pour créer un skin dans le répertoire ```layouts/``` si vous le souhaitez. La principale différence sera que vous n'aurez pas besoin de mettre à jour le fichier de configuration du site pour utiliser un thème.
+Notez que vous pouvez utiliser ce tutoriel pour créer un skin dans le répertoire `layouts/` si vous le souhaitez. La principale différence sera que vous n'aurez pas besoin de mettre à jour le fichier de configuration du site pour utiliser un thème.
 
 ### La page d'accueil
 
@@ -74,7 +73,7 @@ La page d'accueil, ou la page de destination, est la première page que beaucoup
 
 Lorsque Hugo s'exécute, il recherche un fichier de configuration qui contient des paramètres qui remplacent les valeurs par défaut pour l'ensemble du site. Le fichier peut utiliser TOML, YAML ou JSON. Je préfère utiliser TOML pour mes fichiers de configuration. Si vous préférez utiliser JSON ou YAML, vous devrez traduire mes exemples. Vous devrez également modifier le nom du fichier puisque Hugo utilise l'extension pour déterminer comment le traiter.
 
-Hugo traduit les fichiers Markdown en HTML. Par défaut, Hugo s'attend à trouver des fichiers Markdown dans votre répertoire ```content/``` and les modèles dans le répertoire ```themes/```. Il créera les fichiers HTML dans votre répertoire ```public/```. Vous pouvez le modifier en spécifiant d'autres emplacements dans le fichier de configuration.
+Hugo traduit les fichiers Markdown en HTML. Par défaut, Hugo s'attend à trouver des fichiers Markdown dans votre répertoire `content/` and les modèles dans le répertoire `themes/`. Il créera les fichiers HTML dans votre répertoire `public/`. Vous pouvez le modifier en spécifiant d'autres emplacements dans le fichier de configuration.
 
 ### Le contenu
 
@@ -188,7 +187,6 @@ $
 
 Hugo a créé deux fichiers XML, ce qui est standard, mais il n'y a pas de fichiers HTML.
 
-
 ### Tester le nouveau site
 
 Vérifiez que vous pouvez exécuter le serveur Web intégré. Cela réduira considérablement votre cycle de développement si vous le faites. Commencez en exécutant la commande "server". Si vous réussissez, vous verrez une sortie similaire à la suivante:
@@ -233,7 +231,7 @@ Ce deuxième avertissement est plus facile à expliquer. Nous n'avons pas créé
 
 À propos du premier avertissement. C'est pour la page d'accueil. Vous pouvez le dire parce que la première mise en page qu'il recherchait était "index.html". Cela n'est utilisé que par la page d'accueil.
 
-J'aime que le drapeau verbose demande à Hugo de lister les fichiers qu'il recherche. Pour la page d'accueil, ce sont index.html, _default/list.html et _default/single.html. Il y a des règles que nous aborderons plus loin qui expliquent les noms et les chemins. Pour l'instant, n'oubliez pas que Hugo n'a pas pu trouver un modèle pour la page d'accueil et il vous l'a dit.
+J'aime que le drapeau verbose demande à Hugo de lister les fichiers qu'il recherche. Pour la page d'accueil, ce sont index.html, \_default/list.html et \_default/single.html. Il y a des règles que nous aborderons plus loin qui expliquent les noms et les chemins. Pour l'instant, n'oubliez pas que Hugo n'a pas pu trouver un modèle pour la page d'accueil et il vous l'a dit.
 
 À ce stade, vous avez une installation de travail et un site sur lequel nous pouvons développer. Tout ce qui reste, c'est d'ajouter du contenu et un thème pour l'afficher.
 
@@ -244,7 +242,6 @@ Hugo ne fournit pas de thème par défaut. Il y a quelques-uns disponibles (j'ai
 Nous allons créer un nouveau thème appelé "zafta". Étant donné que le but de ce didacticiel est de vous montrer comment remplir les fichiers pour extraire votre contenu, le thème ne contiendra aucun CSS. En d'autres termes, moche mais fonctionnel.
 
 Tous les thèmes utilisent des philosophies différentes sur le contenu et la mise en page. Les philosophies fortes permettent de créer un thème facilement, mais différentes philosophies rendrons l'utilisation du thème plus difficile. Par exemple, Zafta utilise "post" au lieu de "blog". Lorsque vous construisez un thème, envisagez d'utiliser les termes que d'autres thèmes utilisent.
-
 
 ### Créer un squelette
 
@@ -313,8 +310,6 @@ $ find themes/zafta -name '*.html' | xargs ls -l
                                             header.html
 $
 ```
-
-
 
 ### Mettre à jour le fichier de configuration pour utiliser notre thème
 
@@ -433,7 +428,7 @@ Consultez le site Hugo principal pour obtenir de l'information sur l'utilisation
 
 ### Purger le répertoire public/
 
-Lors de la génération du site, Hugo va créer de nouveaux fichiers et mettre à jour les existants dans le répertoire ```public /```. Il ne supprimera pas les fichiers qui ne sont plus utilisés. Par exemple, les fichiers créés dans le mauvais répertoire ou avec le mauvais titre resteront. Si vous les laissez, vous pourriez les confondre plus tard. Je recommande de nettoyer votre site avant de le générer.
+Lors de la génération du site, Hugo va créer de nouveaux fichiers et mettre à jour les existants dans le répertoire `public /`. Il ne supprimera pas les fichiers qui ne sont plus utilisés. Par exemple, les fichiers créés dans le mauvais répertoire ou avec le mauvais titre resteront. Si vous les laissez, vous pourriez les confondre plus tard. Je recommande de nettoyer votre site avant de le générer.
 
 Remarque: Si vous utilisez un SSD, vous devez ignorer cela. L'agitation sur un SSD peut être coûteuse.
 
@@ -444,7 +439,6 @@ L'option "`--watch`" de Hugo va surveiller les changements dans le répertoire c
 ### Rchargement en direct
 
 Le serveur web intégré de Hugo supporte les rechargements en direct. Lorsque qu'une page est sauvegardée sur le serveur, le navigateur est amené à rafraîchir la page. Habituellement, cela se produit avant que vous puissiez dire "Woah, c'est incroyable."
-
 
 ### Commandes de développement
 
@@ -499,14 +493,15 @@ in 1 ms
 La page d'accueil est l'une des quelques pages spéciales que Hugo crée automatiquement. Comme mentionné précédemment, il recherche l'un des trois fichiers dans le répertoire de mise en page (layout/) du thème:
 
 1. index.html
-2. _default/list.html
-3. _default/single.html
+2. \_default/list.html
+3. \_default/single.html
 
 Nous pourrions mettre à jour l'un des modèles par défaut, mais une bonne décision de conception est de mettre à jour le modèle le plus spécifique disponible. Ce n'est pas une règle difficile et rapide (en fait, nous ne la respecterons pas plusieurs fois dans ce tutoriel), mais c'est une bonne généralisation.
 
 ### Créer une page d'accueil statique
 
 À l'heure actuelle, cette page est vide car nous n'avons aucun contenu et nous n'avons aucune logique dans le modèle. Changeons cela en ajoutant du texte au modèle.
+
 ```
 $ vi themes/zafta/layouts/index.html
 <!DOCTYPE html>
@@ -565,7 +560,7 @@ $ cat public/index.html
 </html>
 ```
 
-Lorsque vous utilisez `--watch`, le script de rechargement automatique est ajouté par Hugo. Renseignez-vous dans la documentation avec les termes *live reload* pour voir qu'est-ce qu'il fait et comment le désactiver.
+Lorsque vous utilisez `--watch`, le script de rechargement automatique est ajouté par Hugo. Renseignez-vous dans la documentation avec les termes _live reload_ pour voir qu'est-ce qu'il fait et comment le désactiver.
 
 ### Créer une page d'accueil "dynamique"
 
@@ -683,12 +678,12 @@ $ find public -type f -name '*.html' | xargs ls -l
 -rw-r--r--  1 quoha  staff   0 Sep 29 22:13 public/post/second/index.html
 $
 ```
+
 Les nouveaux fichiers sont vides parce que les modèles utilisé pour générer le contenu sont vides. La page d'accueil n'affiche pas non plus le nouveau contenu. Nous devons modifier les modèles pour ajouter les articles.
 
 ### Modèles de liste et simples
 
 Avec Hugo, nous avons trois principaux types de modèles. Il y a le modèle de page d'accueil que nous avons édité précédement. Il est utilisé seulement pour la page d'accueil. Nous avons également le modèles simple qui sont utilisés pour générer du contenu simple. Et nous avons les modèles de liste qui sont utilisés pour grouper plusieurs contenus.
-
 
 D'une manière générale, les modèles de liste sont nommés "list.html" et les modèles simples sont nommés "single.html".
 
@@ -771,7 +766,7 @@ Et, si c'est entièrement vrai, ce tutoriel devrai être plus court. Il y a quel
 
 Nous travaillons avec des articles, qui sont stockés dans le répertoire content/post/. Cela signifie que leur section est "post" (et si nous n'avons rien fait de travers, leur type est également "post").
 
-Hugo utilise la section et le type pour définir le modèle pour chaque partie du contenu. Hugo va d'abord chercher un modèle qui correspond à la section ou au type. S'il n'arrive pas à en trouver un, il va alors chercher dans le répertoire _default/. Il y a quelques cas que nous allons couvrir lorsque nous travaillerons avec les catégories et les tags, mais pour le moment, nous supposerons que Hugo va essayer post/single.html, puis _default/single.html.
+Hugo utilise la section et le type pour définir le modèle pour chaque partie du contenu. Hugo va d'abord chercher un modèle qui correspond à la section ou au type. S'il n'arrive pas à en trouver un, il va alors chercher dans le répertoire \_default/. Il y a quelques cas que nous allons couvrir lorsque nous travaillerons avec les catégories et les tags, mais pour le moment, nous supposerons que Hugo va essayer post/single.html, puis \_default/single.html.
 
 Maintenant que nous connaissons la règle de rechercher, regardons ce qui est mis à notre disposition actuellement:
 
@@ -780,10 +775,10 @@ $ find themes/zafta -name single.html | xargs ls -l
 -rw-r--r--  1 quoha  staff  132 Sep 29 17:31 themes/zafta/layouts/_default/
                                                 single.html
 ```
+
 Nous pourrions créer un nouveau modèle, post/single.html, ou modifier le modèle par défaut. Comme nous n'utilisons actuellement aucun autre type de contenu, commençons par mettre à jour le modèle par défaut.
 
 Sovenez-vous, tout contenu pour lequel nous n'avons pas créé de modèle utilisera ce modèle. Cela peut être bien ou mauvais. Mauvais parce que je sais que nous allons ajouter d'autres types de contenu et nous allons devoir annuler certaines des modifications que nous avons effectuées. Mais c'est bien parce que nous allons pouvoir voir directement les résultats. C'est également bien de démarrer ici car nous pouvons commencer à faire la mise en place basique du site. Comme nous ajouterons plus de contenu, nous remanierons ce fichier et déplacerons la logique ailleur. Hugo fait cela plutôt bien, donc nous accepterons le coût et procèderons.
-
 
 #### Mise à jour du modèle
 
@@ -929,7 +924,7 @@ $ find themes/zafta -name list.html | xargs ls -l
                                             list.html
 ```
 
-Comme pour l'article seul, nous devons décider d'éditer _default/list.html ou de créer post/list.html. Nous n'avons toujours pas plusieurs types de contenu, alors restons cohérant et éditons le modèle de liste par défaut.
+Comme pour l'article seul, nous devons décider d'éditer \_default/list.html ou de créer post/list.html. Nous n'avons toujours pas plusieurs types de contenu, alors restons cohérant et éditons le modèle de liste par défaut.
 
 ## Création d'une page de haut niveau
 
@@ -1062,6 +1057,7 @@ $ vi themes/zafta/layouts/partials/footer.html
 </html>
 :wq
 ```
+
 ### Modification du modèle de page d'accueil pour utiliser les modèles partiels
 
 La différence notable entre un appel d'un modèle et celui d'un modèle partiel est le manque de chemin:
@@ -1069,7 +1065,9 @@ La différence notable entre un appel d'un modèle et celui d'un modèle partiel
 ```
 {{ template "theme/partials/header.html" . }}
 ```
+
 versus
+
 ```
 {{ partial "header.html" . }}
 ```

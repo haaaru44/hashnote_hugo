@@ -1,8 +1,8 @@
 ---
 author:
-  name: "hash"
+  name: 'hash'
 date: 2020-08-03
-linktitle: hugoインストール
+linktitle: hugoinstall
 type:
   - post
   - posts

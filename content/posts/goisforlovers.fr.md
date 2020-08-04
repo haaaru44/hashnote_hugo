@@ -5,7 +5,7 @@ description = ""
 featured = "pic02.jpg"
 featuredalt = ""
 featuredpath = "date"
-linktitle = ""
+linktitle = "hugo"
 slug = "Introduction aux modeles Hugo"
 title = "Introduction aux modèles (Hu)go"
 type = ["posts","post"]
@@ -41,14 +41,13 @@ fonctions.
 
 **Les variables Go et les fonctions sont accessibles avec {{ }}**
 
-
 Accès à une variable prédéfinie "foo":
 
     {{ foo }}
 
 **Les paramètres sont séparés par des espaces**
 
-Appel de la fonction add avec 1 et 2 en argument**
+Appel de la fonction add avec 1 et 2 en argument\*\*
 
     {{ add 1 2 }}
 
@@ -59,6 +58,7 @@ Accès au paramètre de la page "bar"
     {{ .Params.bar }}
 
 **Les parenthèses peuvent être utilisées pour grouper des éléments ensemble**
+
 ```
 {{ if or (isset .Params "alt") (isset .Params "caption") }} Caption {{ end }}
 ```
@@ -78,7 +78,6 @@ Les variables peuvent également être définies et appelées.
 
     {{ $address := "123 Main St."}}
     {{ $address }}
-
 
 ## Functions
 
@@ -106,16 +105,15 @@ Hugo.
 
     {{ template "chrome/header.html" . }}
 
-
 ## Logique
 
 Go templates fourni les itérations et la logique conditionnèle des plus basique.
 
 ### Itération
 
-Comme en go, les modèles go utilisent fortement *range* pour itérer dans une
+Comme en go, les modèles go utilisent fortement _range_ pour itérer dans une
 map, un array ou un slice. Les exemples suivant montre différentes façons
-d'utiliser *range*
+d'utiliser _range_
 
 **Exemple 1: En utilisant le context**
 
@@ -138,15 +136,15 @@ d'utiliser *range*
 
 ### Conditions
 
-*If*, *else*, *with*, *or*, *&*, *and* fournissent la base pour la logique
-conditionnelle avec Go templates. Comme *range*, chaque déclaration est fermé
+_If_, _else_, _with_, _or_, _&_, _and_ fournissent la base pour la logique
+conditionnelle avec Go templates. Comme _range_, chaque déclaration est fermé
 avec `end`.
 
-Go templates considère les valeurs suivante comme *false* :
+Go templates considère les valeurs suivante comme _false_ :
 
-* false
-* 0
-* tout array, slice, map ou chaine d'une longueur de zéro
+- false
+- 0
+- tout array, slice, map ou chaine d'une longueur de zéro
 
 **Exemple 1: If**
 
@@ -161,10 +159,12 @@ Go templates considère les valeurs suivante comme *false* :
     {{ end }}
 
 **Exemple 3: And & Or**
+
 ```
 {{ if and (or (isset .Params "title") (isset .Params "caption"))
     (isset .Params "attr")}}
 ```
+
 **Exemple 4: With**
 
 Une manière alternative d'écrire un "if" et de référencer cette même valeur est
@@ -183,20 +183,20 @@ Le premier exemple peut être simplifié à ceci :
         {{ index .Params "caption" }}
     {{ end }}
 
-## *Pipes*
+## _Pipes_
 
 L'un des composants le plus puissant de Go templates est la capacité d'empiler
-les action l'une après l'autre. Cela est fait en utilisant les *pipes*.
-Empruntés aux *pipes* unix, le concept est simple. Chaque sortie de *pipeline*
-devient l'entrée du *pipe* suivant.
+les action l'une après l'autre. Cela est fait en utilisant les _pipes_.
+Empruntés aux _pipes_ unix, le concept est simple. Chaque sortie de _pipeline_
+devient l'entrée du _pipe_ suivant.
 
-À cause de la syntaxe très simple de Go templates, le *pipe* est essentiel pour
-être capable d'enchainer les appels de fonctions. Une limitation des *pipes*
+À cause de la syntaxe très simple de Go templates, le _pipe_ est essentiel pour
+être capable d'enchainer les appels de fonctions. Une limitation des _pipes_
 est qu'il ne peuvent fonctionner seulement avec une seule valeur et cette valeur
-devient le dernier paramètre du prochain *pipeline*.
+devient le dernier paramètre du prochain _pipeline_.
 
 Quelques exemples simple devrait vous aider à comprendre comment utiliser les
-*pipes*.
+_pipes_.
 
 **Exemple 1 :**
 
@@ -206,8 +206,7 @@ est identique à
 
     {{ eq 1 1 | if }} Same {{ end }}
 
-
-Il semble étrange de placer le *if* à la fin, mais il fournit une bonne
+Il semble étrange de placer le _if_ à la fin, mais il fournit une bonne
 illustration de la façon d'utiliser les tuyaux.
 
 **Exemple 2 :**
@@ -217,12 +216,14 @@ illustration de la façon d'utiliser les tuyaux.
 Accès au paramètre de page nommé "disqus_url" et échappement du HTML
 
 **Exemple 3 :**
+
 ```
 {{ if or (or (isset .Params "title") (isset .Params "caption"))
     (isset .Params "attr")}}
 Stuff Here
 {{ end }}
 ```
+
 Peut être réécrit en
 
 ```
@@ -243,6 +244,7 @@ entière. Si vous avez besoin y d'accèder depuis l'intérieur d'une boucle, il 
 judicieux d'y définir comme variable au lieu de dépendre du contexte.
 
 **Exemple:**
+
 ```
 {{ $title := .Site.Title }}
 {{ range .Params.tags }}
@@ -297,8 +299,6 @@ Ceci est le code correspondant dans le modèle :
         </div>
       {{ end }}
 
-
-
 ## Utiliser les paramètres de site (config)
 
 Dans votre configuration de plus haut niveau (ex `config.yaml`), vous pouvez
@@ -308,8 +308,8 @@ Pour les instances, vous pourriez délarer :
 
 ```yaml
 params:
-  CopyrightHTML: "Copyright &#xA9; 2013 John Doe. All Rights Reserved."
-  TwitterUser: "spf13"
+  CopyrightHTML: 'Copyright &#xA9; 2013 John Doe. All Rights Reserved.'
+  TwitterUser: 'spf13'
   SidebarRecentLimit: 5
 ```
 
@@ -324,6 +324,7 @@ de le chercher dans votre modèle.
 <div class="text-center">{{.Site.Params.CopyrightHTML | safeHtml}}</div>
 </footer>{{end}}
 ```
+
 Une alternative au "if" et d'appeler la même valeur est d'utiliser "with". Cela
 modifiera le contexte et passera le bloc si la variable est absente :
 
@@ -347,6 +348,5 @@ page, vous pouvez le faire comme dans l'exemple suivant :
 </nav>
 ```
 
-
-[go]: <http://golang.org/>
-[gohtmltemplate]: <http://golang.org/pkg/html/template/>
+[go]: http://golang.org/
+[gohtmltemplate]: http://golang.org/pkg/html/template/
