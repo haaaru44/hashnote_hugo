@@ -6,7 +6,7 @@ featuredalt = ""
 featuredpath = "date"
 linktitle = "hugo"
 title = "MarkDownでYouTube動画埋め込み"
-slug = "markdownYouTube"
+slug = "markdownyoutube"
 type = "post"
 +++
 
