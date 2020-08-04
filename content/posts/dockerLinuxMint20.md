@@ -1,24 +1,12 @@
----
-author:
-  name: "hash"
-title: Dockerインストール(Linux)
-linktitle: Dockerインストール(Linux)
-date: 2020-08-04T16:19:46+09:00
-type:
-  - post
-  - posts
-draft: true
-toc: false
-weight: 10
-images:
-slug = "linux docker mint"
-series:
-  - Hugo 101
-tags:
-  - untagged
----
-
-# Linux に Docker インストール
++++
+categories = ["Hugo","Linux"]
+date = "2020-08-04"
+description = "LinuxMintDocker"
+linktitle = ""
+title = "LinuxにDockerをインストール"
+slug = ["linux","docker","mint"]
+type = "post"
++++
 
 ```
 Get https://registry-1.docker.io/v2/: dial tcp: lookup registry-1.docker.io on 10.0.238.70:53: no such host
