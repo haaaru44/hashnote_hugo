@@ -2,9 +2,9 @@
 categories = ["Hugo","Linux"]
 date = "2020-08-03"
 description = "HugoMacOs"
-linktitle = ""
+linktitle = "hugoinstall"
 title = "hugoインストール(mac)"
-slug = ["linux","docker","mint"]
+slug = "HugoInstall"
 tags = [
   "linux",
   "docker",

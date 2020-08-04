@@ -2,9 +2,9 @@
 categories = ["Hugo","Linux"]
 date = "2020-08-04"
 description = "LinuxMintDocker"
-linktitle = ""
+linktitle = "LinuxMintDocker"
 title = "LinuxにDockerをインストール"
-slug = ["linux","docker","mint"]
+slug = "LinuxMintDocker"
 tags = [
   "linux",
   "docker",
