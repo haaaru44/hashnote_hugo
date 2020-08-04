@@ -17,4 +17,4 @@ type = "post"
 [![](http://img.youtube.com/vi/rWKmQYLKihA/0.jpg)](http://www.youtube.com/watch?v=rWKmQYLKihA)
 
 これを自動で作ってくれるサイト  
-[Embed youtube tonarkdown](http://embedyoutube.org/)
+[Embed youtube to markdown](http://embedyoutube.org/)
