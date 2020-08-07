@@ -4,7 +4,7 @@ date: 2020-08-07T20:51:29+09:00
 draft: true
 toc: false
 linktitle: "markdowntitle"
-tags: ["markdown", "hugo"]
+tags: ["markdown", "hugo", "linux"]
 slug: "title"
 ---
 
