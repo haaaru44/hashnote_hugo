@@ -1,6 +1,6 @@
 ---
 author:
-  name: "Hugo"
+  name: 'Hugo'
 date: 2020-08-07T20:51:29+09:00
 linktitle: MarkDownTitle
 title: マークダウンタイトルの書き方
@@ -8,7 +8,7 @@ type:
   - post
   - posts
 weight: 10
-tags: ["hugo", "linux", "markdown"]
+tags: ['hugo', 'linux', 'markdown']
 series:
   - Hugo 101
 aliases:
@@ -23,10 +23,10 @@ $ hugo new posts/markdown.md
 
 #### タイトルの書き方例
 
-```
+```md
 ---
 author:
-  name: "Hugo"
+  name: 'Hugo'
 date: 2020-08-07T20:51:29+09:00
 linktitle: MarkDownTitle
 title: マークダウンタイトルの書き方
@@ -34,7 +34,7 @@ type:
   - post
   - posts
 weight: 10
-tags: ["hugo", "linux", "markdown"]
+tags: ['hugo', 'linux', 'markdown']
 series:
   - Hugo 101
 aliases:

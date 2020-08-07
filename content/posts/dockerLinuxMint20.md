@@ -27,9 +27,9 @@ Get https://registry-1.docker.io/v2/: dial tcp: lookup registry-1.docker.io on 1
 ### Docker のインストール
 
 ```
-apt install docker.io docker-compose
-sudo gpasswd -a $USER docker
-service docker restart
+$ apt install docker.io docker-compose
+$ sudo gpasswd -a $USER docker
+$ service docker restart
 ```
 
 一度ログアウトすれば docker, docker-compose コマンドが使えるようになる。
