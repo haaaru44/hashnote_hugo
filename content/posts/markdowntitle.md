@@ -9,11 +9,13 @@ tags: ["markdown", "hugo"]
 slug: "title"
 ---
 
-### 新しい記事を追加
+#### 新しい記事を追加
 
 ```
 $ hugo new posts/markdown.md
 ```
+
+#### タイトルの書き方例
 
 ```
 ---
