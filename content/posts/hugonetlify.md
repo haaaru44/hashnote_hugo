@@ -1,18 +1,19 @@
-+++
-categories = ["Hugo","Netlify"]
-date = "2020-08-08"
-description = "HugoNetlify"
-linktitle = "hugoinstall"
-title = "HugoとNetlifyでハマる"
-slug = "HugoNetlify"
-tags = [
-  "linux",
-  "netlify",
-  "mint",
-  "hugo",
-  ]
-type = "post"
-+++
+---
+author:
+  name: 'Hugo'
+date: 2020-08-08
+linktitle: hugoinstall
+title: HugoとNetlifyでハマる
+type:
+  - post
+  - posts
+weight: 10
+tags: ['hugo', 'netlify', 'markdown']
+series:
+  - Hugo 101
+aliases:
+  - /blog/mdtitle/
+---
 
 > ### デプロイでハマったところのメモ
 

@@ -1,18 +1,20 @@
-+++
-categories = ["Hugo","Linux"]
-date = "2020-08-08"
-description = "HugoMacOs"
-linktitle = "hugoinstall"
-title = "初心者向けhugoblogの作り方(mac)"
-tags = [
-  "linux",
-  "docker",
-  "mint",
-  "hugo",
-  ]
-type = "post"
-slug = "install"
-+++
+---
+author:
+  name: 'Hugo'
+date: 2020-08-08
+linktitle: hugoinstall
+title: 初心者向けhugoblogの作り方(mac)
+type:
+  - post
+  - posts
+weight: 10
+tags: ['hugo', 'netlify', 'markdown']
+slug: install
+series:
+  - Hugo 101
+aliases:
+  - /blog/slug/
+---
 
 > ### 準備するもの
 

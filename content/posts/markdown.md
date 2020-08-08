@@ -1,20 +1,20 @@
-+++
-categories = ["Hugo"]
-date = "2020-08-04"
-description = "MarkDownでYouTube動画埋め込み"
-featuredalt = ""
-featuredpath = "date"
-linktitle = "hugo"
-title = "MarkDownでYouTube動画埋め込み"
-slug = "markdownyoutube"
-tags = [
-  "linux",
-  "markdown",
-  "youtube",
-  "hugo",
-  ]
-type = "post"
-+++
+---
+author:
+name: 'Hugo'
+date: 2020-08-04T20:51:29+09:00
+linktitle: MarkdownYoutube
+title: MarkDown で YouTube 動画埋め込み
+type:
+  - post
+  - posts
+weight: 10
+tags: ['hugo', 'linux', 'markdown']
+slug: markdownyoutube
+series:
+  - Hugo 101
+aliases:
+  - /blog/slug/
+---
 
 ```
 [![](http://img.youtube.com/vi/rWKmQYLKihA/0.jpg)](http://www.youtube.com/watch?v=rWKmQYLKihA "")

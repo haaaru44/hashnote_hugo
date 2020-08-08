@@ -1,18 +1,20 @@
-+++
-categories = ["Hugo","Linux"]
-date = "2020-08-04"
-description = "LinuxMintDocker"
-linktitle = "linuxmintdocker"
-title = "LinuxにDockerをインストール"
-slug = "LinuxMintDocker"
-tags = [
-  "linux",
-  "docker",
-  "mint",
-  "hugo",
-  ]
-type = "post"
-+++
+---
+author:
+  name: 'Hugo'
+date: 2020-08-04
+linktitle: LinuxMintDocker
+title: LinuxにDockerをインストール
+type:
+  - post
+  - posts
+weight: 10
+tags: ['hugo', 'docker', 'mint', 'linux']
+slug: linuxdocker
+series:
+  - Hugo 101
+aliases:
+  - /blog/slug/
+---
 
 ```
 Get https://registry-1.docker.io/v2/: dial tcp: lookup registry-1.docker.io on 10.0.238.70:53: no such host
