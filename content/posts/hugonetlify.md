@@ -20,8 +20,8 @@ type = "post"
 - CSS が反映されない
 
 > #### テーマが反映されない
->
-> themes 下にテーマをインストールする際、、
+
+themes 下にテーマをインストールする際、、
 
 ```
 git clone git@github.com:themefisher/parsa-hugo.git
