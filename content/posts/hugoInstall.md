@@ -4,8 +4,6 @@ date = "2020-08-03"
 description = "HugoMacOs"
 linktitle = "hugoinstall"
 title = "初心者向けhugoblogの作り方(mac)"
-slug = "HugoInstall"
-images = "https://lh4.googleusercontent.com/J0Hebe39gJumTg9Yts9GE4-1b1rp5-1FYqh3kpg6e3tuweKZkCP7djNoI8v5TgPylW5d8K9wp52RaCPF_hbIr6oPGn-sWjRE0jbb4e5JdCkcOk9OHYQ=w1280"
 tags = [
   "linux",
   "docker",
@@ -13,6 +11,7 @@ tags = [
   "hugo",
   ]
 type = "post"
+slug = "install"
 +++
 
 > ### 準備するもの

@@ -5,7 +5,6 @@ description = "HugoNetlify"
 linktitle = "hugoinstall"
 title = "HugoとNetlifyでハマる"
 slug = "HugoNetlify"
-images = ""
 tags = [
   "linux",
   "netlify",
@@ -37,8 +36,8 @@ git submodule add git@github.com:themefisher/parsa-hugo.git
 で解決
 
 > #### CSS が反映されない
->
-> config.toml の baseURL をデフォルトでは
+
+config.toml
 
 ```
 # default config
@@ -50,3 +49,19 @@ summaryLength = "10"
 paginate = 6
 
 ```
+
+local では大丈夫ですが
+Netlify デプロイでは「baseURL」をデフォルトではこのように CSS が反映されていない
+![](https://lh3.googleusercontent.com/kzb4lmiOpI3rDKh9xi9bvJ_pzRQCS-U5td93U5QDBBoTKDVgh2KqoOogUlpcOjj7V9iRgA)
+
+```
+# default config
+baseURL = "https://boring-colden-6acf01.netlify.app"
+languageCode = "ja"
+title = "Parsa Hugo | Personal Blog Template"
+theme = "parsa-hugo"
+summaryLength = "10"
+paginate = 6
+```
+
+公開用の URL に変更して解決
