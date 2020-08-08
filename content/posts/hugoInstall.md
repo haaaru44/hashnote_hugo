@@ -1,6 +1,6 @@
 +++
 categories = ["Hugo","Linux"]
-date = "2020-08-03"
+date = "2020-08-08"
 description = "HugoMacOs"
 linktitle = "hugoinstall"
 title = "初心者向けhugoblogの作り方(mac)"
@@ -183,5 +183,7 @@ $ hugo new posts/newpost.md
 を実行
 
 > ### 今回作成したサイトデモ
->
-> [demo](https://boring-colden-6acf01.netlify.app/)
+
+[demo](https://boring-colden-6acf01.netlify.app/)
+
+[>#Hugo と Netlify でハマったこと](https://hashnote.biz/posts/2020/hugonetlify/)

@@ -1,6 +1,6 @@
 +++
 categories = ["Hugo","Netlify"]
-date = "2020-08-03"
+date = "2020-08-08"
 description = "HugoNetlify"
 linktitle = "hugoinstall"
 title = "HugoとNetlifyでハマる"
