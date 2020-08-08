@@ -8,7 +8,7 @@ type:
   - post
   - posts
 weight: 10
-tags: ['hugo', 'netlify', 'markdown']
+tags: ['hugo', 'netlify', 'markdown', 'mac']
 slug: install
 series:
   - Hugo 101
