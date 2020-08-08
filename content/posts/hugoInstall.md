@@ -3,8 +3,9 @@ categories = ["Hugo","Linux"]
 date = "2020-08-03"
 description = "HugoMacOs"
 linktitle = "hugoinstall"
-title = "hugoインストール(mac)"
+title = "初心者向けhugoblogの作り方(mac)"
 slug = "HugoInstall"
+images = "https://lh4.googleusercontent.com/J0Hebe39gJumTg9Yts9GE4-1b1rp5-1FYqh3kpg6e3tuweKZkCP7djNoI8v5TgPylW5d8K9wp52RaCPF_hbIr6oPGn-sWjRE0jbb4e5JdCkcOk9OHYQ=w1280"
 tags = [
   "linux",
   "docker",
@@ -80,68 +81,65 @@ $ cd hugoblog
 テーマは公式から
 [HUGO](https://themes.gohugo.io/)
 
-今回は「aether」というシンプルなテーマを使用
-![](https://lh3.googleusercontent.com/FMFhRnADI6ZPloe8QrM45Z77JcxVBZgCvShICujCwrcU_ARAjH6AcMQrWFdnJHrCCctZg9-lEeXQ2-Ogg8-uMTzMvPUUNeCIttFImbMHwq-tO0vUOUc=w1280)
+今回は「parsa-hugo」というシンプルなテーマを使用
+![](https://lh3.googleusercontent.com/XT9dpMEB0RGIsUBPKKi2lLGwsBmjfaLRYDKHVdh5RYEVI14hSECoZGvCOQaCWVxaN_5e12XVmAaEYGSKRvNn-3h6g3m8lQ3jvtaBwozw38ZfIzUJ=w1280)
 
-テーマのページのインストール方法を参考に
+ここで GitHub に New リポジトリを作成し init しておきます  
+git clone でもインストールできますが Netlify にアップする際にハマるので git submodule を使います
 
 ```
-git clone https://github.com/josephhutch/aether.git themes/aether
+git submodule add git@github.com:themefisher/parsa-hugo.git
 ```
 
 を実行
 
 ```
-% git clone https://github.com/josephhutch/aether.git themes/aether
-Cloning into 'themes/aether'...
-remote: Enumerating objects: 81, done.
-remote: Counting objects: 100% (81/81), done.
-remote: Compressing objects: 100% (55/55), done.
-remote: Total 1463 (delta 41), reused 54 (delta 21), pack-reused 1382
-Receiving objects: 100% (1463/1463), 8.19 MiB | 1.31 MiB/s, done.
-Resolving deltas: 100% (656/656), done.
+% git submodule add git@github.com:themefisher/parsa-hugo.git                        (git)-[master]
+Cloning into '/Users/haruharu/hugo/hugoblog/parsa-hugo'...
+remote: Enumerating objects: 493, done.
+remote: Total 493 (delta 0), reused 0 (delta 0), pack-reused 493
+Receiving objects: 100% (493/493), 21.08 MiB | 5.83 MiB/s, done.
+Resolving deltas: 100% (261/261), done.
 ```
 
 これで「themes」ディレクトリ内にテーマをインストールできました
 
 ```
-% tree -L 3
+% tree -L 3                                                              (git)-[master]
 .
+├── README.md
 ├── archetypes
-│   └── default.md
+│   └── default.md
 ├── config.toml
 ├── content
+│   └── about
+│       └── _index.md
 ├── data
 ├── layouts
+├── netlify.toml
+├── resources
+│   └── _gen
+│       ├── assets
+│       └── images
 ├── static
+│   └── images
 └── themes
-    └── aether
-        ├── LICENSE.md
+    └── parsa-hugo
+        ├── LICENSE
         ├── README.md
         ├── archetypes
         ├── assets
         ├── exampleSite
         ├── images
         ├── layouts
+        ├── netlify.toml
         ├── static
         └── theme.toml
 ```
 
-インストールしたテーマ内の「examlreSite」の中身を全て「hugoblog」ディレクトリ直下にコピーします
+今回はテンプレートをそのまま使いたいのでインストールしたテーマ内の「examlreSite」の中身を全て「hugoblog」ディレクトリ直下にコピーします
 
-![](https://lh5.googleusercontent.com/IC-SB9-r25nqxRm_LAyA3Eel7yKLA0sGTdsBM8jGKzcKUvwsDowIfo5oWDIuG3W7yZ11HDRc_SbeupGa_eLXgvggH2Iqn8wJ_IJ4H0EUfSiC1fIdDg=w1280)
-
-「config.toml」を一部削除
-
-```
-baseurl = "http://example.org"
-title = "Hugo Themes - aether"
-author = "Joe Hutchinson"
-canonifyurls = true
-paginate = 3
-theme = "aether"
-themesDir = "themes/aether" #←ここを削除
-```
+![](https://lh6.googleusercontent.com/m0gY6l4xpTKiSblehIvBmANdv31IjW-x7JF-z0Ss4GD5IpA-cEAOSdTUr19lgBKkA3V7ox1VB938hhalb5CqDJAJtkFKOOWjIych1IcuxiJBEmMUjtc=w1280)
 
 > ### ローカルでテスト
 
@@ -175,7 +173,7 @@ Press Ctrl+C to stop
 
 これで localhost:1313 で無事立ち上がりました
 
-![](https://lh3.googleusercontent.com/gx9iMFsnUYakwDhufUM3Fn5gBVZoLitb5m2bbuBDD0S5kGBNDJc6PUZNemPAHxn-9GnwP0au9NVSlnUexoLYX2V_kC1GvwVXDHZySDM99yB_skw6RXg=w1280)
+![](https://lh4.googleusercontent.com/J0Hebe39gJumTg9Yts9GE4-1b1rp5-1FYqh3kpg6e3tuweKZkCP7djNoI8v5TgPylW5d8K9wp52RaCPF_hbIr6oPGn-sWjRE0jbb4e5JdCkcOk9OHYQ=w1280)
 
 > ### 記事の作成
 
@@ -184,3 +182,7 @@ $ hugo new posts/newpost.md
 ```
 
 を実行
+
+> ### 今回作成したサイトデモ
+>
+> [demo](https://boring-colden-6acf01.netlify.app/)
