@@ -53,7 +53,7 @@ paginate = 6
 
 local では大丈夫ですが
 Netlify デプロイでは「baseURL」をデフォルトではこのように CSS が反映されていない
-![](https://lh5.googleusercontent.com/tc7X6GsS-id_GSdc5bk6rmGkspu_00ZmnKo_QXzE6HEmvko0dt_8E5dVeRJ5jLkJuLMxZT5s6cRJTT6tsWdW0TwGrwmTAco0I3z3I4q7Xc6dFexILPM=w1280)
+![](https://friendly-galileo-52e802.netlify.app/images/img02.jpg)
 
 ```
 # default config
@@ -66,4 +66,4 @@ paginate = 6
 ```
 
 公開用の URL に変更して解決
-![](https://lh6.googleusercontent.com/BFzttJUuTQTX2fPHvp3d16ixShYT8fwTKGE-d_UBs4afvFtW5SpKJQBvyeifqbZ3WRiDoxt0mO9tZsZgZfEeNAVudIHQmeXVet48VOflBY3mkAM654AJ=w1280)
+![](https://friendly-galileo-52e802.netlify.app/images/img03.jpg)

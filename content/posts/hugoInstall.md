@@ -83,7 +83,7 @@ $ cd hugoblog
 [HUGO](https://themes.gohugo.io/)
 
 今回は「parsa-hugo」というシンプルなテーマを使用
-![](https://lh3.googleusercontent.com/za1H2-fLAuvO08Zrer6DIBJ5Y-ujrHC_PR-o44cmbFrMjxa4FuBRu_PDvyK9Vi1xDs-eOjm9vC8FhkICMP9LLDEo9eFGhqcLmwUitz3BNHyeBwvL=w1280)
+![](https://friendly-galileo-52e802.netlify.app/images/img04.jpg)
 
 ここで GitHub に New リポジトリを作成し init しておきます  
 git clone でもインストールできますが Netlify にアップする際にハマるので git submodule を使います
@@ -140,7 +140,7 @@ Resolving deltas: 100% (261/261), done.
 
 今回はテンプレートをそのまま使いたいのでインストールしたテーマ内の「examlreSite」の中身を全て「hugoblog」ディレクトリ直下にコピーします
 
-![](https://lh3.googleusercontent.com/sppKyp6VSSbgcjmw7dT_T5rVHghBvU-cF-OJZcdcVuvEmx3eMEtgQXpCEQKHWFwqq8BZhl29nnqVfWF-mSL4uO1YYgxSCH1qaur8YDukGMLO17qm-Ew=w1280)
+![](https://friendly-galileo-52e802.netlify.app/images/img05.jpg)
 
 > ### ローカルでテスト
 
@@ -174,7 +174,7 @@ Press Ctrl+C to stop
 
 これで localhost:1313 で無事立ち上がりました
 
-![](https://lh3.googleusercontent.com/rGq9rUlhm6FR951JZJlHGVa7P9RI7ggMlyA09yl6GDbXWuFnjZ6Z0vlz2miUkWQPRwD8s5I7ICHu6wmI3rrkH_mMwZbwt1SRUQvIQ9zabr3yFnU-8LE=w1280)
+![](https://friendly-galileo-52e802.netlify.app/images/img01.jpg)
 
 > ### 記事の作成
 
